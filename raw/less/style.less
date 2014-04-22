@@ -1,0 +1,41 @@
+@import "normalize.less";
+@import "../../bower_components/lesshat/build/lesshat.less";
+html {
+	body {
+		.display(flex);
+		.flex-direction(column);
+		text-align: center;
+		font-size: 4em;
+		background-color: #fff;
+		.transition(.2s all ease-out);
+		.som {
+			.flex(3);
+			margin: 1em auto;
+			> div {
+				display: inline-block;
+			}
+		}
+		.answer {
+			.flex(2);
+			label {
+				display: block;
+			}
+			input {
+				display: block;
+				margin: 1em auto;
+				&#answer {
+					width: 2em;
+				}
+			}
+		}
+		.progress {
+			.flex(1);
+		}
+		&.right {
+			background-color: #0f0;
+		}
+		&.wrong {
+			background-color: #f00;
+		}
+	}
+}
