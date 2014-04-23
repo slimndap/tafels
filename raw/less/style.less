@@ -86,7 +86,7 @@ html {
 						margin-right: .25em;
 					}
 				}
-				#score {
+				.scoreboard {
 					position: absolute;
 					right: .25em/.5;
 					top: 0;
@@ -121,6 +121,7 @@ html {
 					border-radius: 10px;
 					color: inherit;
 					margin: 0 0 0.5em 0;
+					width: 1.25em;
 					&.delete {
 						background-color: @red;
 						.box-shadow(0 5px 0px 0px darken(@red, 10%));
@@ -134,7 +135,15 @@ html {
 		}
 		#result {
 			display: none;
-			padding: 1em 0;
+			.scoreboard {
+				font-size: 2em;
+				padding-top: 1em;
+				&:before {
+					content: 'score: ';
+					font-size: .25em;
+					display: block;
+				}
+			}
 			.start {
 				&:extend(html body #menu .start all);
 			}
@@ -180,6 +189,11 @@ html {
 				&:extend(html body #menu .start all);
 				background-color: @green !important;
 				.box-shadow(0 5px 0 0 darken(@green, 10%)) !important;
+			}
+			.credits {
+				font-size: .25em;
+				color: darken(@yellow, 10%);
+				line-height: 1em/.25;
 			}
 		}
 		&.wrong {

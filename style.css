@@ -1598,13 +1598,13 @@ html body #game .dashboard #timer:before {
   content: '\f017';
   margin-right: .25em;
 }
-html body #game .dashboard #score {
+html body #game .dashboard .scoreboard {
   position: absolute;
   right: 0.5em;
   top: 0;
   font-size: 0.5em;
 }
-html body #game .dashboard #score:before {
+html body #game .dashboard .scoreboard:before {
   content: 'score: ';
 }
 html body #game .som > * {
@@ -1631,6 +1631,7 @@ html body #game .keyboard button {
   border-radius: 10px;
   color: inherit;
   margin: 0 0 0.5em 0;
+  width: 1.25em;
 }
 html body #game .keyboard button.delete {
   background-color: #c42d34;
@@ -1646,7 +1647,15 @@ html body #game .keyboard button.go {
 }
 html body #result {
   display: none;
-  padding: 1em 0;
+}
+html body #result .scoreboard {
+  font-size: 2em;
+  padding-top: 1em;
+}
+html body #result .scoreboard:before {
+  content: 'score: ';
+  font-size: .25em;
+  display: block;
 }
 html body #settings {
   background-color: #fcca0a;
@@ -1682,6 +1691,11 @@ html body #settings .start {
   -webkit-box-shadow: 0 5px 0 0 #208639 !important;
   -moz-box-shadow: 0 5px 0 0 #208639 !important;
   box-shadow: 0 5px 0 0 #208639 !important;
+}
+html body #settings .credits {
+  font-size: .25em;
+  color: #d0a603;
+  line-height: 4em;
 }
 html body.wrong #game {
   background-color: #c42d34;

@@ -2,7 +2,7 @@ class Tafels
 	constructor: ->
 		@body = jQuery 'body'
 	
-		@score = jQuery '#score'
+		@score = jQuery '.scoreboard'
 		@timer = jQuery '#timer'
 		
 		@times = jQuery '#times'

@@ -31,7 +31,7 @@
 	#game
 		.dashboard
 			#timer 10.0
-			#score 0
+			.scoreboard 0
 		.som
 			#times
 			&times;
@@ -54,9 +54,11 @@
 			%button(value="9") 9
 			%button(value="0") 0
 			%button.go(value="go") >
+			
 				
 	#result
-		%a.start(href="#game") nog eens
+		.scoreboard
+		%a.start(href="#game") nog een keer
 		%a.settings(href="#settings") Instellingen
 	#settings
 		%h2 Welke tafels?
@@ -81,7 +83,7 @@
 		%input.tafel#tafel-10(type="checkbox" name="tafels[]" value="10")
 		%label(for="tafel-10") 10
 		%a.start(href="#game") start
-		
+		.credits Gemaakt door de papa van Billy (4a)
 	:javascript
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
