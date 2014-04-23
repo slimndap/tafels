@@ -91,7 +91,7 @@ class Tafels
 		@body.removeClass 'result right wrong'
 		@answer.val ''
 		@scored 0
-		@time 10
+		@time 20
 
 jQuery ->
 	tafels = new Tafels()

@@ -192,6 +192,9 @@ html body #game {
 html body #game .som > * {
   display: inline-block;
 }
+html body #game .som:after {
+  content: '=';
+}
 html body #game form {
   display: block;
 }
