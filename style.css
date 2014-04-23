@@ -1607,11 +1607,7 @@ html body #game .dashboard #score {
 html body #game .som > * {
   display: inline-block;
 }
-html body #game .som:after {
-  content: '=';
-}
 html body #game form {
-  display: block;
   margin: 1em 0;
 }
 html body #game form input {
