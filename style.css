@@ -179,7 +179,7 @@ html body {
 }
 html body #menu {
   display: block;
-  padding-top: 2em;
+  padding-top: 1em;
   font-size: 2em;
 }
 html body #game {
@@ -187,17 +187,13 @@ html body #game {
   margin: 0 auto;
   display: none;
   position: relative;
-  padding: 4em 0.25em 0.25em;
-}
-html body #game .som {
-  font-size: 2em;
+  padding: 2em 0.25em 0.25em;
 }
 html body #game .som > * {
   display: inline-block;
 }
 html body #game form {
   display: block;
-  font-size: 2em;
 }
 html body #game form input {
   width: 2em;
@@ -217,7 +213,7 @@ html body #game #score {
 }
 html body #result {
   display: none;
-  padding-top: 2em;
+  padding-top: 1em;
   font-size: 2em;
 }
 html body.right {
