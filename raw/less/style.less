@@ -119,14 +119,18 @@ html {
 				}
 			}
 			.keyboard {
+				overflow: auto;
+				width: (1.25em * 3) + (0.15em * 6);
+				margin: 0 auto;
 				button {
 					background-color: @yellow;
 					border: none;
 					.box-shadow(0 5px 0px 0px darken(@yellow, 10%));
 					border-radius: 10px;
 					color: inherit;
-					margin: 0 0 0.5em 0;
+					margin: 0 .15em 0.5em .15em;
 					width: 1.25em;
+					float: left;
 					text-align: center;
 					&.delete {
 						background-color: @red;

@@ -1627,6 +1627,11 @@ html body #game form input {
   text-align: center;
   letter-spacing: inherit;
 }
+html body #game .keyboard {
+  overflow: auto;
+  width: 4.65em;
+  margin: 0 auto;
+}
 html body #game .keyboard button {
   background-color: #fcca0a;
   border: none;
@@ -1635,8 +1640,9 @@ html body #game .keyboard button {
   box-shadow: 0 5px 0px 0px #d0a603;
   border-radius: 10px;
   color: inherit;
-  margin: 0 0 0.5em 0;
+  margin: 0 .15em 0.5em .15em;
   width: 1.25em;
+  float: left;
   text-align: center;
 }
 html body #game .keyboard button.delete {

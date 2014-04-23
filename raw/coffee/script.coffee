@@ -69,7 +69,7 @@ class Tafels
 		@body.removeClass 'result settings right wrong'
 		@answer.val ''
 		@scored 0
-		@time 20
+		@time 60
 		
 	settings: ->
 		@body.removeClass 'game result right wrong'
