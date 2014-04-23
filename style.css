@@ -1604,6 +1604,9 @@ html body #game .dashboard #score {
   top: 0;
   font-size: 0.5em;
 }
+html body #game .dashboard #score:before {
+  content: 'score: ';
+}
 html body #game .som > * {
   display: inline-block;
 }
