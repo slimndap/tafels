@@ -5,6 +5,7 @@
 @green: #2AAF4B;
 @yellow: #FCCA0A;
 @blue: #19AAD9;
+@red: #C42D34;
 
 * {
 	.box-sizing(border-box);
@@ -104,7 +105,30 @@ html {
 				display: block;
 				margin: 1em 0;
 				input {
-					width: 2em;
+					width: 4em;
+					background-color: darken(@blue, 10%);
+					border: none;
+					color: inherit;
+					padding: 0 .25em;
+					text-align: center;
+				}
+			}
+			.keyboard {
+				button {
+					background-color: @yellow;
+					border: none;
+					.box-shadow(0 5px 0px 0px darken(@yellow, 10%));
+					border-radius: 10px;
+					color: inherit;
+					margin: 0 0 0.5em 0;
+					&.delete {
+						background-color: @red;
+						.box-shadow(0 5px 0px 0px darken(@red, 10%));
+					}
+					&.go {
+						background-color: @green;
+						.box-shadow(0 5px 0px 0px darken(@green, 10%));
+					}
 				}
 			}
 		}
@@ -158,11 +182,10 @@ html {
 				.box-shadow(0 5px 0 0 darken(@green, 10%)) !important;
 			}
 		}
-		&.right {
-			background-color: #0f0;
-		}
 		&.wrong {
-			background-color: #f00;
+			#game {
+				background-color: @red;			
+			}
 		}
 		&.game {
 			#menu, #result, #settings {

@@ -13,6 +13,7 @@ class Tafels
 		
 		jQuery('.start').click => @start()
 		jQuery('.settings').click => @settings()
+		jQuery('.keyboard button').click (e) => @key e.currentTarget
 		
 		@form.submit =>
 			@check()
@@ -28,8 +29,11 @@ class Tafels
 
 	start: ->
 		@reset()
-		@body.addClass 'game'
-		@next()
+		if @tafels().length > 0
+			@body.addClass 'game'
+			@next()
+		else
+			@settings()
 		false
 		
 	time: (time) ->
@@ -56,7 +60,6 @@ class Tafels
 		@answer.val ''
 		@tafel.text tafels[Math.floor Math.random()*tafels.length]
 		@times.text Math.floor Math.random()*10 + 1
-		@answer.focus()
 	
 	stop: ->
 		@body.removeClass 'game right wrong'
@@ -78,6 +81,13 @@ class Tafels
 		jQuery('input.tafel:checked').each ->
 			tafels.push jQuery(@).val()
 		return tafels
+
+	key: (button) ->
+		switch jQuery(button).val()
+			when 'x' then @answer.val ''
+			when 'go' then @check()
+			else 
+				@answer.val @answer.val() + jQuery(button).val()
 
 jQuery ->
 	tafels = new Tafels()

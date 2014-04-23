@@ -1615,7 +1615,34 @@ html body #game form {
   margin: 1em 0;
 }
 html body #game form input {
-  width: 2em;
+  width: 4em;
+  background-color: #1486ab;
+  border: none;
+  color: inherit;
+  padding: 0 .25em;
+  text-align: center;
+}
+html body #game .keyboard button {
+  background-color: #fcca0a;
+  border: none;
+  -webkit-box-shadow: 0 5px 0px 0px #d0a603;
+  -moz-box-shadow: 0 5px 0px 0px #d0a603;
+  box-shadow: 0 5px 0px 0px #d0a603;
+  border-radius: 10px;
+  color: inherit;
+  margin: 0 0 0.5em 0;
+}
+html body #game .keyboard button.delete {
+  background-color: #c42d34;
+  -webkit-box-shadow: 0 5px 0px 0px #9b2329;
+  -moz-box-shadow: 0 5px 0px 0px #9b2329;
+  box-shadow: 0 5px 0px 0px #9b2329;
+}
+html body #game .keyboard button.go {
+  background-color: #2aaf4b;
+  -webkit-box-shadow: 0 5px 0px 0px #208639;
+  -moz-box-shadow: 0 5px 0px 0px #208639;
+  box-shadow: 0 5px 0px 0px #208639;
 }
 html body #result {
   display: none;
@@ -1656,11 +1683,8 @@ html body #settings .start {
   -moz-box-shadow: 0 5px 0 0 #208639 !important;
   box-shadow: 0 5px 0 0 #208639 !important;
 }
-html body.right {
-  background-color: #0f0;
-}
-html body.wrong {
-  background-color: #f00;
+html body.wrong #game {
+  background-color: #c42d34;
 }
 html body.game #menu,
 html body.game #result,
