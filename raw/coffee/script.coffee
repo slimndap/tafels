@@ -50,7 +50,7 @@ class Tafels
 	
 	scored: (score) ->
 		if score==undefined
-			score = (@score.text() * 1 + 1)
+			score = (@score.eq(0).text() * 1) + 1
 			time = @timer.text() * 1 + 1
 			@time time
 		@score.text score
