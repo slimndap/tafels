@@ -20,14 +20,20 @@
 	%script(src="script.js")
        
 %body
-	.som
-		#times
-		&times;
-		#tafel
-	.answer
-		%form#form
-			%label(for="answer") =
-			%input#answer(type="number" name="answer" required)
-	%progress(max="10" value="0")
+	#menu
+		%a.start(href="#game") Start
+	#game
+		#timer 10.0
+		#score 0
+		.som
+			#times
+			&times;
+			#tafel
+		.answer
+			%form#form
+				%input#answer(type="number" name="answer" required)
+	
+	#result
+		%a.start(href="#game") Nog een keer
 
 </html>

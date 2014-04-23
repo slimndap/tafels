@@ -14,17 +14,25 @@
   <script src='script.js'></script>
 </head>
 <body>
-  <div class='som'>
-    <div id='times'></div>
-    &times;
-    <div id='tafel'></div>
+  <div id='menu'>
+    <a class='start' href='#game'>Start</a>
   </div>
-  <div class='answer'>
-    <form id='form'>
-      <label for='answer'>=</label>
-      <input id='answer' name='answer' required type='number'>
-    </form>
+  <div id='game'>
+    <div id='timer'>10.0</div>
+    <div id='score'>0</div>
+    <div class='som'>
+      <div id='times'></div>
+      &times;
+      <div id='tafel'></div>
+    </div>
+    <div class='answer'>
+      <form id='form'>
+        <input id='answer' name='answer' required type='number'>
+      </form>
+    </div>
   </div>
-  <progress max='10' value='0'></progress>
+  <div id='result'>
+    <a class='start' href='#game'>Nog een keer</a>
+  </div>
 </body>
 </html>
