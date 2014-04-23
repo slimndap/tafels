@@ -1579,7 +1579,7 @@ html body #result .settings:before {
   text-align: center;
 }
 html body #game {
-  max-width: 480px;
+  max-width: 640px;
   background-color: #19aad9;
   margin: 0 auto;
   display: none;
@@ -1668,7 +1668,7 @@ html body #result .scoreboard {
   text-shadow: 5px 5px rgba(0, 0, 0, 0.5);
 }
 html body #result .scoreboard:before {
-  content: 'score: ';
+  content: 'tafelscore: ';
   font-size: .25em;
   display: block;
   text-shadow: none;
