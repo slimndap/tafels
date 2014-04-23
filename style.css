@@ -1517,11 +1517,15 @@ a {
 }
 html {
   height: 100%;
+  font-family: 'Bowlby One', 'cursive';
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 html body {
   text-align: center;
   font-size: 2em;
-  background-color: #fff;
+  background-color: #2aaf4b;
+  color: #fff;
   -webkit-transition: 0.2s all ease-out;
   -moz-transition: 0.2s all ease-out;
   -o-transition: 0.2s all ease-out;
@@ -1529,7 +1533,7 @@ html body {
   height: 100%;
 }
 html body > * {
-  height: 100%;
+  min-height: 100%;
   display: none;
 }
 html body #menu {
@@ -1537,8 +1541,19 @@ html body #menu {
   position: relative;
   padding-top: 1em;
 }
-html body #menu .start {
-  font-size: 2em;
+html body #menu .start,
+html body #result .start,
+html body #settings .start {
+  font-size: 1em;
+  background-color: #fcca0a;
+  border-radius: 10px;
+  line-height: 1.5em;
+  display: inline-block;
+  padding: 0 0.25em;
+  margin: 0.5em auto;
+  -webkit-box-shadow: 0 5px 0px 0px #d0a603;
+  -moz-box-shadow: 0 5px 0px 0px #d0a603;
+  box-shadow: 0 5px 0px 0px #d0a603;
 }
 html body #menu .settings,
 html body #result .settings {
@@ -1549,6 +1564,7 @@ html body #result .settings {
   line-height: 1em;
   height: 1em;
   overflow: hidden;
+  color: #208639;
 }
 html body #menu .settings:before,
 html body #result .settings:before {
@@ -1559,10 +1575,34 @@ html body #result .settings:before {
 }
 html body #game {
   max-width: 480px;
+  background-color: #19aad9;
   margin: 0 auto;
   display: none;
   position: relative;
-  padding: 2em 0.25em 0.25em;
+}
+html body #game .dashboard {
+  position: relative;
+  height: 1.25em;
+  line-height: 1.25em;
+  background-color: #1486ab;
+  margin-bottom: 1em;
+}
+html body #game .dashboard #timer {
+  position: absolute;
+  left: 0.5em;
+  font-size: 0.5em;
+  top: 0;
+}
+html body #game .dashboard #timer:before {
+  font-family: FontAwesome;
+  content: '\f017';
+  margin-right: .25em;
+}
+html body #game .dashboard #score {
+  position: absolute;
+  right: 0.5em;
+  top: 0;
+  font-size: 0.5em;
 }
 html body #game .som > * {
   display: inline-block;
@@ -1572,41 +1612,24 @@ html body #game .som:after {
 }
 html body #game form {
   display: block;
+  margin: 1em 0;
 }
 html body #game form input {
   width: 2em;
 }
-html body #game #timer {
-  position: absolute;
-  left: .25em;
-  top: .25em;
-}
-html body #game #timer:after {
-  content: 's';
-}
-html body #game #timer:before {
-  font-family: FontAwesome;
-  content: '\f017';
-}
-html body #game #score {
-  position: absolute;
-  right: .25em;
-  top: .25em;
-}
 html body #result {
   display: none;
-  padding-top: 1em;
-}
-html body #result .start {
-  font-size: 2em;
+  padding: 1em 0;
 }
 html body #settings {
-  text-align: left;
+  background-color: #fcca0a;
 }
 html body #settings h2 {
   margin: 0;
   font-weight: normal;
-  font-size: 1em;
+  line-height: 2.5em;
+  background-color: #d0a603;
+  font-size: 0.5em;
 }
 html body #settings input {
   display: none;
@@ -1621,10 +1644,17 @@ html body #settings input:checked + label:before {
   content: '\f046';
 }
 html body #settings label {
+  text-align: left;
   display: block;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  line-height: 36px;
+  border-bottom: 1px solid #d0a603;
+  line-height: 1.25em;
   padding: 0 0.25em;
+}
+html body #settings .start {
+  background-color: #2aaf4b !important;
+  -webkit-box-shadow: 0 5px 0 0 #208639 !important;
+  -moz-box-shadow: 0 5px 0 0 #208639 !important;
+  box-shadow: 0 5px 0 0 #208639 !important;
 }
 html body.right {
   background-color: #0f0;

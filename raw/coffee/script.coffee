@@ -21,10 +21,10 @@ class Tafels
 			time = @timer.text() * 1
 			if @body.hasClass 'game'
 				if time > 0 and 
-					@time time - 0.5
+					@time time - 0.1
 				else
 					@stop()
-		, 500
+		, 100
 
 	start: ->
 		@reset()

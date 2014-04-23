@@ -11,16 +11,19 @@
   <meta content='text/html; charset=UTF-8' http-equiv='content-type'>
   <link href='apple-touch-icon-precomposed.png' rel='apple-touch-icon'>
   <link href='style.css' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Bowlby+One' rel='stylesheet' type='text/css'>
   <script src='script.js'></script>
 </head>
 <body>
   <div id='menu'>
-    <a class='start' href='#game'>Start</a>
+    <a class='start' href='#game'>start</a>
     <a class='settings' href='#settings'>Instellingen</a>
   </div>
   <div id='game'>
-    <div id='timer'>10.0</div>
-    <div id='score'>0</div>
+    <div class='dashboard'>
+      <div id='timer'>10.0</div>
+      <div id='score'>0</div>
+    </div>
     <div class='som'>
       <div id='times'></div>
       &times;
@@ -33,11 +36,11 @@
     </div>
   </div>
   <div id='result'>
-    <a class='start' href='#game'>Nog een keer</a>
+    <a class='start' href='#game'>nog eens</a>
     <a class='settings' href='#settings'>Instellingen</a>
   </div>
   <div id='settings'>
-    <h2>Welk tafels?</h2>
+    <h2>Welke tafels?</h2>
     <input class='tafel' id='tafel-1' name='tafels[]' type='checkbox' value='1'>
     <label for='tafel-1'>1</label>
     <input class='tafel' id='tafel-2' name='tafels[]' type='checkbox' value='2'>
@@ -58,7 +61,7 @@
     <label for='tafel-9'>9</label>
     <input class='tafel' id='tafel-10' name='tafels[]' type='checkbox' value='10'>
     <label for='tafel-10'>10</label>
-    <a class='start' href='#game'>Start</a>
+    <a class='start' href='#game'>start</a>
   </div>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

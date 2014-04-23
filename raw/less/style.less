@@ -2,6 +2,10 @@
 @import "../../bower_components/lesshat/build/lesshat.less";
 @import "fontawesome/font-awesome.less";
 
+@green: #2AAF4B;
+@yellow: #FCCA0A;
+@blue: #19AAD9;
+
 * {
 	.box-sizing(border-box);
 }
@@ -13,14 +17,18 @@ a {
 
 html {
 	height: 100%;
+	font-family: 'Bowlby One', 'cursive';
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
 	body {
 		text-align: center;
 		font-size: 2em;
-		background-color: #fff;
+		background-color: @green;
+		color: #fff;
 		.transition(.2s all ease-out);
 		height: 100%;
 		> * {
-			height: 100%;
+			min-height: 100%;
 			display: none;
 		}
 		#menu {
@@ -28,7 +36,14 @@ html {
 			position: relative;
 			padding-top: 1em;
 			.start {
-				font-size: 2em;
+				font-size: 1em;
+				background-color: @yellow;
+				border-radius: 10px;
+				line-height: 1.5em;
+				display: inline-block;
+				padding: 0 0.25em;
+				margin: 0.5em auto;	
+				.box-shadow(0 5px 0px 0px darken(@yellow, 10%));
 			}
 			.settings {
 				position: absolute;
@@ -38,6 +53,7 @@ html {
 				line-height: 1em;
 				height: 1em;
 				overflow: hidden;
+				color: darken(@green, 10%);
 				&:before {
 					font-family: FontAwesome;
 					content: '\f013';
@@ -48,10 +64,34 @@ html {
 		}
 		#game {
 			max-width: 480px;
+			background-color: @blue;
 			margin: 0 auto;
 			display: none;
 			position: relative;
-			padding: 2em 0.25em 0.25em;
+			.dashboard {
+				position: relative;
+				height: 1.25em;
+				line-height: 1.25em;
+				background-color: darken(@blue, 10%);
+				margin-bottom: 1em;
+				#timer {
+					position: absolute;
+					left: .25em/.5;
+					font-size: 0.5em;
+					top: 0;
+					&:before {
+						font-family: FontAwesome;
+						content: '\f017';
+						margin-right: .25em;
+					}
+				}
+				#score {
+					position: absolute;
+					right: .25em/.5;
+					top: 0;
+					font-size: 0.5em;
+				}
+			}
 			.som {
 				> * {
 					display: inline-block;
@@ -62,44 +102,30 @@ html {
 			}
 			form {
 				display: block;
+				margin: 1em 0;
 				input {
 					width: 2em;
 				}
 			}
-			#timer {
-				position: absolute;
-				left: .25em;
-				top: .25em;
-				&:after {
-					content: 's';
-				}
-				&:before {
-					font-family: FontAwesome;
-					content: '\f017';
-				}
-			}
-			#score {
-				position: absolute;
-				right: .25em;
-				top: .25em;
-			}
 		}
 		#result {
 			display: none;
-			padding-top: 1em;
+			padding: 1em 0;
 			.start {
-				font-size: 2em;
+				&:extend(html body #menu .start all);
 			}
 			.settings {
 				&:extend(html body #menu .settings all);
 			}
 		}
 		#settings {
-			text-align: left;
+			background-color: @yellow;
 			h2 {
 				margin: 0;
 				font-weight: normal;
-				font-size: 1em;
+				line-height: 1.25em/.5;
+				background-color: darken(@yellow, 10%);
+				font-size: 0.5em;
 			}
 			input {
 				display: none;
@@ -120,10 +146,16 @@ html {
 				}				
 			}
 			label {
+				text-align: left;
 				display: block;
-				border-bottom: 1px solid rgba(0,0,0,0.2);
-				line-height: 36px;
+				border-bottom: 1px solid darken(@yellow, 10%);
+				line-height: 1.25em;
 				padding: 0 0.25em;
+			}
+			.start {
+				&:extend(html body #menu .start all);
+				background-color: @green !important;
+				.box-shadow(0 5px 0 0 darken(@green, 10%)) !important;
 			}
 		}
 		&.right {
