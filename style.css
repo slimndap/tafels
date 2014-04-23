@@ -1541,6 +1541,11 @@ html body #menu {
   position: relative;
   padding-top: 1em;
 }
+html body #menu h1 {
+  font-weight: normal;
+  font-size: 2em;
+  text-shadow: 5px 5px rgba(0, 0, 0, 0.5);
+}
 html body #menu .start,
 html body #result .start,
 html body #settings .start {
@@ -1632,6 +1637,7 @@ html body #game .keyboard button {
   color: inherit;
   margin: 0 0 0.5em 0;
   width: 1.25em;
+  text-align: center;
 }
 html body #game .keyboard button.delete {
   background-color: #c42d34;
@@ -1651,11 +1657,13 @@ html body #result {
 html body #result .scoreboard {
   font-size: 2em;
   padding-top: 1em;
+  text-shadow: 5px 5px rgba(0, 0, 0, 0.5);
 }
 html body #result .scoreboard:before {
   content: 'score: ';
   font-size: .25em;
   display: block;
+  text-shadow: none;
 }
 html body #settings {
   background-color: #fcca0a;

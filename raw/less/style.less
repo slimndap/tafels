@@ -36,6 +36,11 @@ html {
 			display: block;
 			position: relative;
 			padding-top: 1em;
+			h1 {
+				font-weight: normal;
+				font-size: 2em;
+				text-shadow: 5px 5px rgba(0,0,0,0.5);
+			}
 			.start {
 				font-size: 1em;
 				background-color: @yellow;
@@ -122,6 +127,7 @@ html {
 					color: inherit;
 					margin: 0 0 0.5em 0;
 					width: 1.25em;
+					text-align: center;
 					&.delete {
 						background-color: @red;
 						.box-shadow(0 5px 0px 0px darken(@red, 10%));
@@ -138,10 +144,12 @@ html {
 			.scoreboard {
 				font-size: 2em;
 				padding-top: 1em;
+				text-shadow: 5px 5px rgba(0,0,0,0.5);
 				&:before {
 					content: 'score: ';
 					font-size: .25em;
 					display: block;
+					text-shadow: none;
 				}
 			}
 			.start {
