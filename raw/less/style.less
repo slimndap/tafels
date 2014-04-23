@@ -1,15 +1,50 @@
 @import "normalize.less";
 @import "../../bower_components/lesshat/build/lesshat.less";
+@import "../../bower_components/fontawesome/less/font-awesome.less";
+
+* {
+	.box-sizing(border-box);
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
 html {
+	height: 100%;
 	body {
 		text-align: center;
 		font-size: 2em;
 		background-color: #fff;
 		.transition(.2s all ease-out);
+		height: 100%;
+		> * {
+			height: 100%;
+			display: none;
+		}
 		#menu {
 			display: block;
+			position: relative;
 			padding-top: 1em;
-			font-size: 2em;
+			.start {
+				font-size: 2em;
+			}
+			.settings {
+				position: absolute;
+				right: 0.25em;
+				bottom: 0.25em;
+				width: 1em;
+				line-height: 1em;
+				height: 1em;
+				overflow: hidden;
+				&:before {
+					font-family: FontAwesome;
+					content: '\f013';
+					display: block;
+					text-align: center;
+				}
+			}
 		}
 		#game {
 			max-width: 480px;
@@ -38,6 +73,10 @@ html {
 				&:after {
 					content: 's';
 				}
+				&:before {
+					font-family: FontAwesome;
+					content: '\f017';
+				}
 			}
 			#score {
 				position: absolute;
@@ -48,7 +87,44 @@ html {
 		#result {
 			display: none;
 			padding-top: 1em;
-			font-size: 2em;
+			.start {
+				font-size: 2em;
+			}
+			.settings {
+				&:extend(html body #menu .settings all);
+			}
+		}
+		#settings {
+			text-align: left;
+			h2 {
+				margin: 0;
+				font-weight: normal;
+				font-size: 1em;
+			}
+			input {
+				display: none;
+				+ label {
+					&:before {
+						font-family: FontAwesome;
+						content: '\f096';
+						display: inline-block;
+						width: 1em;
+					}
+				}
+				&:checked {
+					+ label {
+						&:before {
+							content: '\f046';
+						}
+					}
+				}				
+			}
+			label {
+				display: block;
+				border-bottom: 1px solid rgba(0,0,0,0.2);
+				line-height: 36px;
+				padding: 0 0.25em;
+			}
 		}
 		&.right {
 			background-color: #0f0;
@@ -57,7 +133,7 @@ html {
 			background-color: #f00;
 		}
 		&.game {
-			#menu, #result {
+			#menu, #result, #settings {
 				display: none;
 			}
 			#game {
@@ -65,10 +141,18 @@ html {
 			}
 		}
 		&.result {
-			#menu, #game {
+			#menu, #game, #settings {
 				display: none;
 			}
 			#result {
+				display: block;
+			}
+		}
+		&.settings {
+			#menu, #game, #result {
+				display: none;
+			}
+			#settings {
 				display: block;
 			}
 		}

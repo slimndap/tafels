@@ -2,8 +2,6 @@ class Tafels
 	constructor: ->
 		@body = jQuery 'body'
 	
-		@tafels = [1,2,3,4,5,10]
-
 		@score = jQuery '#score'
 		@timer = jQuery '#timer'
 		
@@ -14,16 +12,18 @@ class Tafels
 		@form = jQuery '#form'
 		
 		jQuery('.start').click => @start()
+		jQuery('.settings').click => @settings()
 		
 		@form.submit =>
 			@check()
 		
 		setInterval () =>
 			time = @timer.text() * 1
-			if time > 0
-				@time time - 0.5
-			else
-				@stop()
+			if @body.hasClass 'game'
+				if time > 0 and 
+					@time time - 0.5
+				else
+					@stop()
 		, 500
 
 	start: ->
@@ -52,19 +52,32 @@ class Tafels
 		@score.text score
 		
 	next: ->
+		tafels = @tafels()
 		@answer.val ''
-		@tafel.text @tafels[Math.floor Math.random()*@tafels.length]
+		@tafel.text tafels[Math.floor Math.random()*tafels.length]
 		@times.text Math.floor Math.random()*10 + 1
 		@answer.focus()
 	
 	stop: ->
 		@body.removeClass 'game right wrong'
 		@body.addClass 'result'
+		
 	reset: ->
-		@body.removeClass 'result right wrong'
+		@body.removeClass 'result settings right wrong'
 		@answer.val ''
 		@scored 0
 		@time 20
+		
+	settings: ->
+		@body.removeClass 'game result right wrong'
+		@body.addClass 'settings'
+		false
+		
+	tafels: ->
+		tafels = []
+		jQuery('input.tafel:checked').each ->
+			tafels.push jQuery(@).val()
+		return tafels
 
 jQuery ->
 	tafels = new Tafels()
