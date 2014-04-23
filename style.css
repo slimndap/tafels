@@ -1621,6 +1621,7 @@ html body #game form input {
   color: inherit;
   padding: 0 .25em;
   text-align: center;
+  letter-spacing: inherit;
 }
 html body #game .keyboard button {
   background-color: #fcca0a;

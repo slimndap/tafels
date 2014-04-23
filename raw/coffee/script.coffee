@@ -91,4 +91,5 @@ class Tafels
 
 jQuery ->
 	tafels = new Tafels()
+	FastClick.attach document.body
 	
