@@ -1,0 +1,19 @@
+html body #settings input {
+  display: block;
+  float: left;
+  width: 10%;
+  line-height: 2em;
+  margin: 0.25em 0;
+}
+html body #settings input + label {
+  float: left;
+  width: 90%;
+  border: none;
+}
+html body #settings input + label:before {
+  content: '';
+  width: auto;
+}
+html body #settings input:checked + label:before {
+  content: '';
+}

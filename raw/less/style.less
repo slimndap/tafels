@@ -167,6 +167,8 @@ html {
 		}
 		#settings {
 			background-color: @yellow;
+			max-width: 640px;
+			margin: 0 auto;
 			h2 {
 				margin: 0;
 				font-weight: normal;
@@ -240,5 +242,7 @@ html {
 			}
 		}
 	}
-	
+	&.lt-ie9 {
+		background-color: orange;
+	}
 }

@@ -1,0 +1,30 @@
+html {
+	body {
+		#settings {
+			input {
+				display: block;
+				float: left;
+				width: 10%;
+				line-height: 2em;
+				margin: 0.25em 0;
+				+ label {
+					float: left;
+					width: 90%;
+					border: none;
+					&:before {
+						content: '';
+						width: auto;
+					}
+				}
+				&:checked {
+					+ label {
+						&:before {
+							content: '';
+						}
+					}
+				}				
+			}
+		}
+		
+	}
+}
