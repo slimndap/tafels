@@ -15,11 +15,13 @@ class Tafels
 		jQuery('.settings').click => @settings()
 		jQuery('.keyboard button').click (e) => @key e.currentTarget
 
-		tafels = localStorage["tafels"]
-		jQuery('#tafel-'+tafel).prop('checked',true) for tafel in tafels.split(',')
+		tafels = localStorage.getItem "tafels"
+		if tafels != null 
+			jQuery('#tafel-'+tafel).prop('checked',true) for tafel in tafels.split(',')
+
 		jQuery('input.tafel').change =>
 			@tafels()
-			
+		
 		setInterval () =>
 			time = @timer.text() * 1
 			if @body.hasClass 'game'
@@ -73,8 +75,7 @@ class Tafels
 		@answer.val ''
 		@scored 0
 		@time 60
-		
-		
+			
 	settings: ->
 		@body.removeClass 'game result right wrong'
 		@body.addClass 'settings'

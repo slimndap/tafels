@@ -27,7 +27,7 @@
 		},
 	"\/bower_components\/jquery\/dist\/jquery.js": {
 		"fileType": 64,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bower_components\/jquery\/dist\/jquery.js",
 		"outputAbbreviatedPath": "\/bower_components\/jquery\/dist\/min\/jquery-ck.js",
@@ -4069,7 +4069,7 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/raw\/coffee\/script.coffee",
-		"minifyOutput": 1,
+		"minifyOutput": 0,
 		"outputAbbreviatedPath": "\/script.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 1,
@@ -4424,17 +4424,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/script.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/script.js",
-		"outputAbbreviatedPath": "\/min\/script-ck.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
 	"\/style.css": {
 		"fileType": 16,
 		"ignore": 1,
@@ -4452,14 +4441,8 @@
 	"\/raw\/coffee\/script.coffee": [
 		{
 			"followForSyntaxChecking": 0,
-			"linkedFileAbbreviatedPath": "\/bower_components\/jquery\/dist\/jquery.js",
-			"position": 0,
-			"type": 0
-			},
-		{
-			"followForSyntaxChecking": 0,
 			"linkedFileAbbreviatedPath": "\/bower_components\/fastclick\/lib\/fastclick.js",
-			"position": 1,
+			"position": 0,
 			"type": 0
 			}
 		]
